@@ -1,21 +1,25 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from 'styled-components'
+import Layout  from '../components/Layout'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const StyledContainer = styled.div`
+  background-color: ${({theme})=>theme.colors.background};
+  width:100%;
+  min-height:100vh;
+`;
+
+const StyledH1 = styled.h1`
+  font-size:30px;
+  padding:30px;
+  color: ${({theme})=>theme.colors.primary};
+`;
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <StyledContainer>
+      <StyledH1>Wiktor Janecki</StyledH1>
+    </StyledContainer>
   </Layout>
 )
 
