@@ -7,11 +7,11 @@ const StyledDiv = styled.div`
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
 
-    border-top: 35px solid #ffffff;
+border-top: 35px solid ${({accent,theme}) => (accent ? theme.colors.accent : theme.colors.primary)};
 `;
 
-const Triangle = () => (
-    <StyledDiv></StyledDiv>
+const Triangle = (props) => (
+    <StyledDiv accent={props.accent}></StyledDiv>
 )
 
 export default Triangle
