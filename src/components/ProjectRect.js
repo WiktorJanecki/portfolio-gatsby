@@ -10,12 +10,14 @@ const StyledProjectRect = styled.div`
     grid-template-columns: 1fr 2fr;
     grid-template-rows:1fr 1fr;
 `;
-const StyledProjectName = styled.h2`
+const StyledProjectName = styled.a`
     grid-column: 1/2;
     grid-row: 1 / 2;
     display:flex;
     align-items:center;
     justify-content:center;
+    text-decoration:none;
+    font-weight:bold;
     flex-direction:column;
     font-size:15px;
     text-align:center;
@@ -42,21 +44,22 @@ const StyledProjectView = styled.img`
 
 `;
 
-const StyledImageContainer = styled.div`
+const StyledImageContainer = styled.a`
     display:flex;
     text-align:center;
     align-items:center;
+    display:block;
     justify-content:center;
     flex-direction:column;
     grid-row: 1/ 3;
     padding:30px 10px 30px 10px;
 `;
 
-const ProjectRect = ({name,source,view}) => (
+const ProjectRect = ({name,href,source,view}) => (
     <StyledProjectRect>
-        <StyledProjectName>{name}</StyledProjectName>
+        <StyledProjectName href={href} target="_blank">{name}</StyledProjectName>
         <StyledProjectSource href={source} target="_blank">SOURCE</StyledProjectSource>
-        <StyledImageContainer><StyledProjectView src={view}/></StyledImageContainer>
+        <StyledImageContainer  href={href} target="_blank"><StyledProjectView src={view}/></StyledImageContainer>
     </StyledProjectRect>
 )
 

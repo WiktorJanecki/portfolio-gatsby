@@ -141,7 +141,7 @@ const StyledFooter = styled.footer`
   width:100%;
   text-align:center;
   font-family:${({theme})=>theme.fonts.header}, sans-serif;
-  padding:20px;
+  padding:20px 0 20px 0;
 `;
 
 const IndexPage = () => (
@@ -292,6 +292,7 @@ const IndexPage = () => (
          <SkillRect language="jp" text="GIT" value={3}/>
          <SkillRect text="A1" value={0}/>
 
+
         </StyledSkillsGrid>
       </StyledCenterContainer>
 
@@ -310,7 +311,7 @@ const IndexPage = () => (
       { /* CHANGE FONT !IMPORTANT */ } <center><StyledH1>PROJECTS</StyledH1></center>
 
       <StyledCenterContainer>
-        <ProjectRect name="DREWCAR" source="https://google.com" view={Project1} />
+        <ProjectRect name="DREWCAR" href="http://drewcar.pl" source="https://google.com" view={Project1} />
       </StyledCenterContainer>
 
       <div style={{"marginBottom":"40px"}}></div>
